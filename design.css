@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+a i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black; 
+}
+
+/* a.active {
+  background-color: #00bcd4;
+  color: #fff;
+} */
+
+.sidebar {
+  width: 220px;
+  background: #565819;
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 2px;
+}
+
+.sidebar li {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.top-bar input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fbc858;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.charts .chart-placeholder {
+  height: 200px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-sales table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.recent-sales th, .recent-sales td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.activity ul {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.quick-actions button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  background: #ff8210;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
