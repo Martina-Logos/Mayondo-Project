@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="design.css" />
+    
+    <style>
+        .dashboard {
+        display: flex;
+      }
+
+      .sidebar {
+        width: 220px;
+        background: #565819;
+        color: #fff;
+        padding: 15px;
+      }
+
+      .sidebar h2 {
+        margin-bottom: 20px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        margin: 15px 0;
+        cursor: pointer;
+      }
+
+      .sidebar i {
+        margin-right: 10px;
+      }
+    </style>
 </head>
 <body>
     
+<div class="dashboard">
+      <aside class="sidebar">
+        <h2>MWF</h2>
+        <nav>
+          <div class="profile">
+            <img
+              src="imgs/Beauty.png"
+              alt="Manager Profile"
+              width="150px"
+              height="200px"
+              style="border-radius: 50%"
+            />
+            <h3>Tee Mwangi</h3>
+            <p>Manager</p>
+          </div>
+
+          <ul>
+            <li>
+              <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-box-open"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a>
+            </li>
+
+            <li>
+              <a href="reports.html"><i class="fas fa-file-alt"></i> Reports</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+</div>
+
 </body>
 </html>
