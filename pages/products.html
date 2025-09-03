@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MWF-Products</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/products.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h2>MWF</h2>
+        <nav>
+          <div class="profile">
+            <img
+              src="../imgs/Beauty.png"
+              alt="Manager Profile"
+              width="100px"
+              height="100px"
+              style="border-radius: 50%"
+            />
+            <h3>Tee Mwangi</h3>
+          </div>
+
+          <ul>
+            <li>
+              <a href="dash.html"><i class="fas fa-home"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fas fa-box-open"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a>
+            </li>
+            <li>
+              <a href="reports.html"><i class="fas fa-file-alt"></i> Reports</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <h1>Elegance Awaits You</h1>
+        </header>
+
+        <div class="filters">
+          <button onclick="filterProducts('All')">All</button>
+          <button onclick="filterProducts('Moisturizer')">Moisturizer</button>
+          <button onclick="filterProducts('Serum')">Serum</button>
+          <button onclick="filterProducts('Toner')">Toner</button>
+          <button onclick="filterProducts('Cleanser')">Cleanser</button>
+          <button onclick="filterProducts('Eye')">Eye</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Products will be injected here -->
+        </div>
+
+        <div class="features">
+          <div>
+            <h4>Luxury made simple.</h4>
+          </div>
+          <div>
+            <h4>Crafted for living beautifully.</h4>
+          </div>
+          <div>
+            <h4>Timeless style. Lasting comfort.</h4>
+          </div>
+        </div>
+        <script src="/javascript/products.js"></script>
+      </main>
+    </div>
+  </body>
+</html>

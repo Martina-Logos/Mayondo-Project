@@ -1,6 +1,8 @@
+
+/*login & dashboard*/
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: #f4f6f8;
   color: #333;
 }
@@ -25,7 +27,7 @@ a i {
 }
 
 a:hover {
-  color: black; 
+  color: black;
 }
 
 /* a.active {
@@ -76,7 +78,7 @@ a:hover {
   background: #fbc858;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .charts .chart-placeholder {
@@ -96,7 +98,8 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.recent-sales th, .recent-sales td {
+.recent-sales th,
+.recent-sales td {
   padding: 10px;
   border: 1px solid #ddd;
 }

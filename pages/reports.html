@@ -4,54 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="design.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <style>
-      .dashboard {
-        display: flex;
-      }
-
-      .sidebar {
-        width: 220px;
-        background: #565819;
-        color: #fff;
-        padding: 15px;
-      }
-
-      .sidebar h2 {
-        margin-bottom: 20px;
-      }
-
-      .sidebar ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .sidebar li {
-        margin: 15px 0;
-        cursor: pointer;
-      }
-
-      .sidebar i {
-        margin-right: 10px;
-      }
-    </style>
+     <link rel="stylesheet" href="../css/reports.css" />
   </head>
+
   <body>
     <div class="dashboard">
+      <div>
       <aside class="sidebar">
         <h2>MWF</h2>
         <nav>
           <div class="profile">
             <img
-              src="imgs/Beauty.png"
+              src="../imgs/Beauty.png"
               alt="Manager Profile"
-              width="150px"
-              height="200px"
+              width="100px"
+              height="100px"
               style="border-radius: 50%"
             />
             <h3>Tee Mwangi</h3>
@@ -78,5 +49,45 @@
         </nav>
       </aside>
     </div>
+
+    <div class="reports-container">
+      <h1>Reports Dashboard</h1>
+
+      <section class="report-section">
+        <h2>Stock Report</h2>
+        <table id="stock-table">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Type</th>
+              <th>Cost Price</th>
+              <th>Product Price</th>
+              <th>Supplier</th>
+              <th>Date</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be injected here -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="report-section">
+        <h2>Sales Summary</h2>
+        <div id="sales-summary">
+          <!-- Dynamic sales data -->
+        </div>
+      </section>
+
+      <section class="report-section">
+        <h2>Promotional Spend</h2>
+        <p id="promo-spend">Calculating...</p>
+      </section>
+    </div>
+
+    </div>
+
+    <script src="reports.js"></script>
   </body>
 </html>

@@ -1,0 +1,89 @@
+.dashboard {
+  display: flex;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+a i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black;
+}
+
+/* a.active {
+  background-color: #00bcd4;
+  color: #fff;
+} */
+
+.sidebar {
+  width: 220px;
+  background: #565819;
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 2px;
+}
+
+.sidebar li {
+  margin: 5px;
+  cursor: pointer;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.reports-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.report-section {
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #e0e0e0;
+}

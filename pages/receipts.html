@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/agentdash.css">
+</head>
+<body>
+    <header>
+  <h2>MWF Sales Agent Dashboard</h2>
+  <div>Welcome, Tee | <span id="date"></span></div>
+</header>
+
+<div class="container">
+  <nav>
+          <div class="profile">
+            <img
+              src="../imgs/salesAgent.jpg"
+              width="100px"
+              height="100px"
+              style="border-radius: 500%"
+            />
+            <h3>Mugerwa Rollins</h3>
+            <h4>Sales Agent</h4>
+          </div>
+    <ul>
+       <li>
+              <a href="agentdash.html"><i class="fas fa-home"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="agentsales.html"
+                ><i class="fas fa-box-open"></i>Sales Entry</a
+              >
+            </li>
+            <li>
+              <a href="receipts.html"
+                ><i class="fas fa-box-open"></i> Receipts</a
+              >
+            </li>
+            <li>
+              <a href="agentreports.html"><i class="fas fa-chart-line"></i>Reports</a>
+            </li>
+    </ul>
+  </nav>
+<div class="card">
+  <h3>🧾 Receipt Preview</h3>
+  <div class="receipt" id="receiptPreview">
+    <div class="branding">
+      <img src="mwf-logo.png" alt="MWF Logo" class="logo" />
+      <div class="watermark">MWF Furniture Works</div>
+    </div>
+    <div class="receipt-body">
+      <p><strong>Receipt ID:</strong> #MWF<span id="receiptId"></span></p>
+      <p><strong>Date:</strong> <span id="receiptDate"></span></p>
+      <p><strong>Agent:</strong> Tee</p>
+      <p><strong>Customer:</strong> <span id="receiptCustomer"></span></p>
+      <p><strong>Product:</strong> <span id="receiptProduct"></span></p>
+      <p><strong>Quantity:</strong> <span id="receiptQuantity"></span></p>
+      <p><strong>Payment Method:</strong> <span id="receiptPayment"></span></p>
+      <p><strong>Transport Fee:</strong> UGX <span id="receiptTransport"></span></p>
+      <p><strong>Total Price:</strong> UGX <span id="receiptTotal"></span></p>
+      <p><strong>Notes:</strong> <span id="receiptNotes"></span></p>
+    </div>
+    <div class="receipt-actions">
+      <button onclick="window.print()">🖨️ Print</button>
+      <button>📤 Export PDF</button>
+      <button>📧 Send to Customer</button>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

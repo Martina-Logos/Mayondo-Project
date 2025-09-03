@@ -9,7 +9,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   if (email === validEmail && password === validPassword) {
     alert("Login successful ");
-    window.location.href = "dashboard.html"; // redirect
+    window.location.href = "dash.html"; // redirect
   } else {
     alert("Invalid email or password");
   }

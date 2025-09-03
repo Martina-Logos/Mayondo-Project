@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;                /* take up all remaining horizontal space */
+  display: flex;
+  flex-direction: column; /* stack header, filters, products vertically */
+  background: #f4f6f8;    /* match your page background */
+  min-height: 100vh;      /* optional: ensure full height */
+}
+
+
+a {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+a i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black;
+}
+
+/* a.active {
+  background-color: #00bcd4;
+  color: #fff;
+} */
+
+.sidebar {
+  width: 220px;
+  background: #565819;
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 2px;
+}
+
+.sidebar li {
+  margin: 5px;
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  padding: 20px 20px 20px;
+  background-color: #e6f2e6;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
+
+.filters button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fbc858;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filters button:hover {
+  background-color: #1b5e20;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+
+/* .product-card p {
+      margin: 5px 0;
+      font-weight: bold;
+      color: #2e7d32;
+    } */
+
+.product-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: gold;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e6f2e6;
+  padding: 20px 8px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.features div {
+  max-width: 200px;
+}
+
+.features h4 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+}

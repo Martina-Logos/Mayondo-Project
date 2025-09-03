@@ -1,0 +1,143 @@
+/* General Layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #2e3a59;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+nav {
+  width: 220px;
+  background-color: #1f2a44;
+  color: white;
+  height: 100vh;
+  padding-top: 2rem;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+a i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black;
+}
+
+/* a.active {
+  background-color: #00bcd4;
+  color: #fff;
+} */
+
+.sidebar {
+  width: 220px;
+  background: #565819;
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 2px;
+}
+
+.sidebar li {
+  margin: 5px;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+nav li:hover {
+  background-color: #2e3a59;
+}
+
+
+/* Card Containers */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+/* Section Titles */
+.card h3 {
+  margin-top: 0;
+  color: #2e3a59;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* Charts */
+canvas {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+/* Top Products List */
+#topProducts {
+  list-style: none;
+  padding: 0;
+}
+#topProducts li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+#topProducts img {
+  margin-right: 0.8rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Highlighted Metrics */
+.card p strong {
+  font-size: 1.4rem;
+  color: #2e7d32; /* Soft green for growth */
+}
+
+/* Responsive Grid (Optional Enhancement) */
+@media (min-width: 768px) {
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
