@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MWF Users</title>
+    <link rel="stylesheet" href="../css/users.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h2>Attendants Management</h2>
+        <nav>
+          <div class="profile">
+            <img
+              src="../imgs/Beauty.png"
+              width="100px"
+              height="100px"
+              style="border-radius: 100%"
+            />
+            <h3>Tee Mwangi</h3>
+            <h4>Manager</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="dash.html"><i class="fas fa-home"></i> Dashboard</a>
+            </li>
+             <li>
+              <a href="stockentry.html"><i class="fas fa-home"></i> Stock Entry</a>
+            </li>
+            <li>
+              <a href="reports.html"><i class="fas fa-file-alt"></i> Reports</a>
+            </li>
+            <li>
+              <a href="users.html"><i class="fas fa-file-alt"></i>Attendants</a>
+            </li>
+            <li>
+              <a href="login.html" onclick="logoutUser()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    
+
+    <main class="main-content">
+      <section class="days">
+        <h2>Manager's Dashboard</h2>
+        <div>
+          Welcome, Tee
+          <br />
+          <span id="date"></span>
+        </div>
+      </section>
+
+      <div id="form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Attendant Name" />
+          <input
+            type="text"
+            id="role"
+            placeholder="Role (e.g. loader, cashier)"
+          />
+          <button class="btn" onclick="addOrUpdateUser()">Add / Update</button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </main>
+    </div>
+  </body>
+</html>

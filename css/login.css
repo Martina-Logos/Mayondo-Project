@@ -29,7 +29,7 @@
         } */
 
 body {
-  background: #f5e9da;
+  background: white;
   font-family: "Segoe UI", sans-serif;
   color: #1c1c1c;
   text-align: center;
@@ -52,7 +52,7 @@ input {
   border-radius: 6px;
 }
 
-#glass-form {
+#glassForm {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.25),

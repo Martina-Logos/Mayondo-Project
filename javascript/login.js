@@ -1,4 +1,4 @@
-document.getElementById("form").addEventListener("submit", function (e) {
+document.getElementById("glassForm").addEventListener("submit", function (e) {
   e.preventDefault();
   let email = document.getElementById("email").value.trim();
   let password = document.getElementById("password").value.trim();
@@ -7,9 +7,15 @@ document.getElementById("form").addEventListener("submit", function (e) {
   let validEmail = "teemwangi@gmail.com";
   let validPassword = "Green_22";
 
+  let agentEmail = "mrollins@gmail.com";
+  let agentPassword = "Grey@50";
+
   if (email === validEmail && password === validPassword) {
     alert("Login successful ");
     window.location.href = "dash.html"; // redirect
+  } else if (email === agentEmail && password === agentPassword) {
+    alert("Login successful ");
+    window.location.href = "agentdash.html"; // redirect
   } else {
     alert("Invalid email or password");
   }

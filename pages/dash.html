@@ -31,24 +31,31 @@
               <a href="dash.html"><i class="fas fa-home"></i> Dashboard</a>
             </li>
             <li>
-              <a href="products.html"
-                ><i class="fas fa-box-open"></i> Products</a
-              >
-            </li>
-            <li>
-              <a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a>
+              <a href="stockentry.html"><i class="fas fa-home"></i> Stock Entry</a>
             </li>
             <li>
               <a href="reports.html"><i class="fas fa-file-alt"></i> Reports</a>
+            </li>
+            <li>
+              <a href="users.html"><i class="fas fa-file-alt"></i>Attendants</a>
+            </li>
+            <li>
+              <a href="login.html" onclick="logoutUser()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
             </li>
           </ul>
         </nav>
       </aside>
 
       <main class="main-content">
-        <header class="top-bar">
-          <input type="text" placeholder="Search..." />
-        </header>
+        <section class="days">
+          <h2>Manager's Dashboard</h2>
+          <div>Welcome, Tee  
+            <br>
+            <span id="date"></span>
+          </div>
+        </section>
 
         <section class="summary-cards">
           <div class="card">
@@ -129,11 +136,20 @@
           </ul>
         </section>
 
-        <!-- <section class="quick-actions">
-          <button>Add Product</button>
-          <button>Add Sale</button>
-          <button>Add Customer</button>
-        </section> -->
+        <script>
+          document.getElementById("date").textContent = new Date().toLocaleDateString();
+
+          function logoutUser() {
+            // Clear session or local storage if used
+            localStorage.clear(); // or sessionStorage.clear();
+
+            // Optionally show a message
+            alert("You have been logged out.");
+
+            // Redirect to login page
+            window.location.href = "login.html";
+          }
+        </script>
       </main>
     </div>
   </body>

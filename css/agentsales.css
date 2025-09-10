@@ -5,7 +5,7 @@ body {
   color: #333;
 }
 header {
-  background-color: #2e3a59;
+  background-color: #8eda8e;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -18,7 +18,7 @@ header {
 }
 nav {
   width: 220px;
-  background-color: #1f2a44;
+  background-color: #565819;
   color: white;
   height: 100vh;
   padding-top: 2rem;
@@ -78,7 +78,7 @@ nav li {
   cursor: pointer;
 }
 nav li:hover {
-  background-color: #2e3a59;
+  background-color: #8eda8e;
 }
 main {
   flex: 1;
@@ -102,7 +102,7 @@ textarea {
   border-radius: 4px;
 }
 button {
-  background-color: #2e3a59;
+  background-color: #565819;
   color: white;
   padding: 0.7rem 1.5rem;
   border: none;
@@ -110,7 +110,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #1f2a44;
+  background-color: #8eda8e;
 }
 .receipt {
   background-color: #eef2f5;

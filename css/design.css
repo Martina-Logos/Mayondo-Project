@@ -30,16 +30,15 @@ a:hover {
   color: black;
 }
 
-/* a.active {
-  background-color: #00bcd4;
-  color: #fff;
-} */
-
 .sidebar {
   width: 220px;
   background: #565819;
   color: #fff;
   padding: 10px;
+}
+
+.sidebar:hover {
+  color: #8eda8e;
 }
 
 .sidebar h2 {
@@ -61,7 +60,7 @@ a:hover {
   padding: 20px;
 }
 
-.top-bar input {
+.days {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -75,7 +74,7 @@ a:hover {
 }
 
 .card {
-  background: #fbc858;
+  background: #8eda8e;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

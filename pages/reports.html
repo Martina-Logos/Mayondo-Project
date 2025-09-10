@@ -8,84 +8,86 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-     <link rel="stylesheet" href="../css/reports.css" />
+    <link rel="stylesheet" href="../css/reports.css" />
   </head>
 
   <body>
     <div class="dashboard">
       <div>
-      <aside class="sidebar">
-        <h2>MWF</h2>
-        <nav>
-          <div class="profile">
-            <img
-              src="../imgs/Beauty.png"
-              alt="Manager Profile"
-              width="100px"
-              height="100px"
-              style="border-radius: 50%"
-            />
-            <h3>Tee Mwangi</h3>
-            <p>Manager</p>
+        <aside class="sidebar">
+          <h2>MWF</h2>
+          <nav>
+            <div class="profile">
+              <img
+                src="../imgs/Beauty.png"
+                alt="Manager Profile"
+                width="100px"
+                height="100px"
+                style="border-radius: 50%"
+              />
+              <h3>Tee Mwangi</h3>
+              <p>Manager</p>
+            </div>
+
+            <ul>
+              <li>
+                <a href="dash.html"><i class="fas fa-home"></i> Dashboard</a>
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-box-open"></i> Products</a
+                >
+              </li>
+              <li>
+                <a href="users.html"
+                  ><i class="fas fa-file-alt"></i>Attendants</a
+                >
+              </li>
+              <li>
+                <a href="reports.html"
+                  ><i class="fas fa-file-alt"></i> Reports</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+
+      <div class="reports-container">
+        <h1>Reports Dashboard</h1>
+
+        <section class="report-section">
+          <h2>Stock Report</h2>
+          <table id="stock-table">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Type</th>
+                <th>Cost Price</th>
+                <th>Product Price</th>
+                <th>Supplier</th>
+                <th>Date</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be injected here -->
+            </tbody>
+          </table>
+        </section>
+
+        <section class="report-section">
+          <h2>Sales Summary</h2>
+          <div id="sales-summary">
+            <!-- Dynamic sales data -->
           </div>
+        </section>
 
-          <ul>
-            <li>
-              <a href="dash.html"><i class="fas fa-home"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href="products.html"
-                ><i class="fas fa-box-open"></i> Products</a
-              >
-            </li>
-            <li>
-              <a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a>
-            </li>
-
-            <li>
-              <a href="reports.html"><i class="fas fa-file-alt"></i> Reports</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </div>
-
-    <div class="reports-container">
-      <h1>Reports Dashboard</h1>
-
-      <section class="report-section">
-        <h2>Stock Report</h2>
-        <table id="stock-table">
-          <thead>
-            <tr>
-              <th>Product Name</th>
-              <th>Type</th>
-              <th>Cost Price</th>
-              <th>Product Price</th>
-              <th>Supplier</th>
-              <th>Date</th>
-              <th>Quantity</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Data will be injected here -->
-          </tbody>
-        </table>
-      </section>
-
-      <section class="report-section">
-        <h2>Sales Summary</h2>
-        <div id="sales-summary">
-          <!-- Dynamic sales data -->
-        </div>
-      </section>
-
-      <section class="report-section">
-        <h2>Promotional Spend</h2>
-        <p id="promo-spend">Calculating...</p>
-      </section>
-    </div>
-
+        <section class="report-section">
+          <h2>Promotional Spend</h2>
+          <p id="promo-spend">Calculating...</p>
+        </section>
+      </div>
     </div>
 
     <script src="reports.js"></script>
