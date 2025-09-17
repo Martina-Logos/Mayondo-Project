@@ -1,0 +1,74 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Document
+link(rel="stylesheet", href="../css/stockentry.css")
+.dashboard
+  aside.sidebar
+    h2 Manager Dashboard
+    nav
+      .profile
+        img(src="../imgs/Beauty.png", width="100px", height="100px", style="border-radius: 100%")
+        h3 Tee Mwangi
+        h4 Manager
+      ul
+        li
+          a(href="/dash")
+            i.fas.fa-home
+            |  Dashboard
+        li
+          a(href="/stockentry")
+            i.fas.fa-home
+            |  Stock Entry
+        li
+          a(href="/reports")
+            i.fas.fa-file-alt
+            |  Reports
+        li
+          a(href="/users")
+            i.fas.fa-file-alt
+            | Attendants
+  section#record-stock
+    h2 Record New Stock
+    form#stockForm
+      label(for="productName") Product Name:
+      input#productName(type="text", name="productName", required)
+      label(for="category") Category:
+      select#category(name="category")
+        option(value="furniture") Furniture
+        option(value="accessory") Accessory
+        option(value="raw-material") Raw Material
+      label(for="quantity") Quantity:
+      input#quantity(type="number", name="quantity", min="1", required)
+      label(for="unitPrice") Unit Price (UGX):
+      input#unitPrice(type="number", name="unitPrice", min="0", required)
+      label Cost Price (UGX):
+      input#costPrice(type="text")
+      //
+         
+                <label>Unit Value (UGX):</label>
+                <input type="text" id="totalValue" /> 
+      label(for="supplier") Supplier:
+      input#supplier(type="text", name="supplier")
+      label(for="dateReceived") Date Received:
+      input#dateReceived(type="date", name="dateReceived", required)
+      button(type="submit") Save Stock
+  //
+     <h2>Recorded Stock</h2>
+          <table id="stockTable">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Cost Price</th>
+                <th>Supplier</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              Rows will be added here dynamically
+            </tbody>
+          </table> 
+script(src="../javascript/stockentry.js")

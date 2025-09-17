@@ -1,0 +1,81 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Document
+link(rel="stylesheet", href="/css/receipts.css")
+header
+  h2 MWF Sales Agent Dashboard
+  div
+    | Welcome, Tee | 
+    span#date
+.container
+  nav
+    .profile
+      img(src="../imgs/salesAgent.jpg", width="100px", height="100px", style="border-radius: 500%")
+      h3 Mugerwa Rollins
+      h4 Sales Agent
+    ul
+      li
+        a(href="/agentdash")
+          i.fas.fa-home
+          |  Dashboard
+      li
+        a(href="/agentsales")
+          i.fas.fa-box-open
+          | Sales Entry
+      li
+        a(href="/receipts")
+          i.fas.fa-box-open
+          |  Receipts
+      li
+        a(href="/agentreports")
+          i.fas.fa-chart-line
+          | Reports
+  .card
+    h3 🧾 Receipt Preview
+    .receipt#receiptPreview
+      div
+        img.logo(src="../imgs/BrownLogo.png", alt)
+      .receipt-body
+        p
+          strong Receipt ID:
+          |  #MWF
+          span#receiptId
+        p
+          strong Date:
+          |  
+          span#receiptDate
+        p
+          strong Agent:
+          |  Tee
+        p
+          strong Customer:
+          |  
+          span#receiptCustomer
+        p
+          strong Product:
+          |  
+          span#receiptProduct
+        p
+          strong Quantity:
+          |  
+          span#receiptQuantity
+        p
+          strong Payment Method:
+          |  
+          span#receiptPayment
+        p
+          strong Transport Fee:
+          |  UGX 
+          span#receiptTransport
+        p
+          strong Total Price:
+          |  UGX 
+          span#receiptTotal
+        p
+          strong Notes:
+          |  
+          span#receiptNotes
+      .receipt-actions
+        button(onclick="window.print()") 🖨️ Print
+        button 📤 Export PDF
+        button 📧 Send to Customer

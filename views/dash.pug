@@ -1,0 +1,115 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title MWF Dashboard
+link(rel="stylesheet", href="../css/design.css")
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
+.dashboard
+  aside.sidebar
+    h2 Manager Dashboard
+    nav
+      .profile
+        img(src="../imgs/Beauty.png", width="100px", height="100px", style="border-radius: 100%")
+        h3 Tee Mwangi
+        h4 Manager
+      ul
+        li
+          a(href="/dash")
+            i.fas.fa-home
+            |  Dashboard
+        li
+          a(href="/stockentry")
+            i.fas.fa-home
+            |  Stock Entry
+        li
+          a(href="/reports")
+            i.fas.fa-file-alt
+            |  Reports
+        li
+          a(href="/users")
+            i.fas.fa-file-alt
+            | Attendants
+        li
+          a(href="/login", onclick="logoutUser()")
+            i.fas.fa-sign-out-alt
+            |  Logout
+
+  main.main-content
+    section.days
+      h2 Manager's Dashboard
+      div
+        | Welcome, Tee
+
+        br
+        span#date
+    section.summary-cards
+      .card
+        h3 Total Employees
+        p 8
+      .card
+        h3 Total Sales
+        p $250,430
+      .card
+        h3 Current Amount
+        p $280,500
+      .card
+        h3 Stock
+        p 325
+    section.charts
+      //  <div class="chart-placeholder">Pie chart</div> 
+    section.recent-sales
+      h3 Recent Sales
+      table
+        thead
+          tr
+            th Date
+            th Product
+            th Amount
+            th Status
+        tbody
+          tr
+            td 28-05-25
+            td Wooden Clock
+            td $75
+            td Delivered
+          tr
+            td 11-05-25
+            td Mirror
+            td $120
+            td Pending
+          tr
+            td 07-07-25
+            td Lamp
+            td $55
+            td Shipped
+          tr
+            td 04-03-25
+            td Drawer
+            td $89
+            td Delivered
+          tr
+            td 04-03-25
+            td Coffee table
+            td $115
+            td Cancelled
+    section.activity
+      h3 Activity
+      ul
+        li Added coffee table 10 minutes ago
+        li Added new items 20 minutes ago
+        li Updated stock 1 hour ago
+        li Posted lamp earlier today
+    script.
+      
+      document.getElementById("date").textContent = new Date().toLocaleDateString();
+      
+                function logoutUser() {
+                  // Clear session or local storage if used
+                  localStorage.clear(); // or sessionStorage.clear();
+      
+                  // Optionally show a message
+                  alert("You have been logged out.");
+      
+                  // Redirect to login page
+                  window.location.href = "login.html";
+                }
+      

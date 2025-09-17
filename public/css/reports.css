@@ -53,37 +53,15 @@ body {
   padding: 20px;
 }
 
-.reports-container {
-  max-width: 1000px;
-  margin: auto;
+.recent-sales table {
+  width: 100%;
+  border-collapse: collapse;
   background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
   margin-bottom: 30px;
 }
 
-.report-section {
-  margin-bottom: 40px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th,
-td {
-  padding: 12px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-th {
-  background-color: #e0e0e0;
+.recent-sales th,
+.recent-sales td {
+  padding: 10px;
+  border: 1px solid #ddd;
 }

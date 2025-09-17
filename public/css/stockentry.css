@@ -1,3 +1,59 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: black;
+}
+
+.dashboard {
+  display: flex;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+a i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black;
+}
+
+.sidebar {
+  width: 220px;
+  background: #565819;
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar:hover {
+  color: white;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 2px;
+}
+
+.sidebar li {
+  margin: 5px;
+  cursor: pointer;
+}
+
+
 #record-stock {
   max-width: 600px;
   margin: auto;
@@ -12,7 +68,7 @@
 }
 
 #stockForm label {
-  display: block;
+  /* display: block; */
   margin-top: 10px;
 }
 
@@ -33,7 +89,7 @@
 }
 
 
-table {
+/* table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -49,12 +105,12 @@ button {
   margin: 0 5px;
   padding: 5px 10px;
   cursor: pointer;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #stockTable {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
   }
-}
+} */

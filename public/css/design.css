@@ -38,7 +38,7 @@ a:hover {
 }
 
 .sidebar:hover {
-  color: #8eda8e;
+  color: white;
 }
 
 .sidebar h2 {
@@ -88,19 +88,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.recent-sales table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  margin-bottom: 30px;
-}
-
-.recent-sales th,
-.recent-sales td {
-  padding: 10px;
-  border: 1px solid #ddd;
 }
 
 .activity ul {

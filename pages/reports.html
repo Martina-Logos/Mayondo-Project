@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/reports.css" />
+    <link rel="stylesheet" href="/public/css/reports.css">
   </head>
 
   <body>
@@ -34,11 +34,6 @@
                 <a href="dash.html"><i class="fas fa-home"></i> Dashboard</a>
               </li>
               <li>
-                <a href="products.html"
-                  ><i class="fas fa-box-open"></i> Products</a
-                >
-              </li>
-              <li>
                 <a href="users.html"
                   ><i class="fas fa-file-alt"></i>Attendants</a
                 >
@@ -56,39 +51,51 @@
       <div class="reports-container">
         <h1>Reports Dashboard</h1>
 
-        <section class="report-section">
-          <h2>Stock Report</h2>
-          <table id="stock-table">
+       <section class="recent-sales">
+          <h3>Recent Sales</h3>
+          <table>
             <thead>
               <tr>
-                <th>Product Name</th>
-                <th>Type</th>
-                <th>Cost Price</th>
-                <th>Product Price</th>
-                <th>Supplier</th>
                 <th>Date</th>
-                <th>Quantity</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
-              <!-- Data will be injected here -->
+              <tr>
+                <td>28-05-25</td>
+                <td>Wooden Clock</td>
+                <td>$75</td>
+                <td>Delivered</td>
+              </tr>
+              <tr>
+                <td>11-05-25</td>
+                <td>Mirror</td>
+                <td>$120</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>07-07-25</td>
+                <td>Lamp</td>
+                <td>$55</td>
+                <td>Shipped</td>
+              </tr>
+              <tr>
+                <td>04-03-25</td>
+                <td>Drawer</td>
+                <td>$89</td>
+                <td>Delivered</td>
+              </tr>
+              <tr>
+                <td>04-03-25</td>
+                <td>Coffee table</td>
+                <td>$115</td>
+                <td>Cancelled</td>
+              </tr>
             </tbody>
           </table>
         </section>
-
-        <section class="report-section">
-          <h2>Sales Summary</h2>
-          <div id="sales-summary">
-            <!-- Dynamic sales data -->
-          </div>
-        </section>
-
-        <section class="report-section">
-          <h2>Promotional Spend</h2>
-          <p id="promo-spend">Calculating...</p>
-        </section>
-      </div>
-    </div>
 
     <script src="reports.js"></script>
   </body>

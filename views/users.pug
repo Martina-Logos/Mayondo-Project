@@ -1,0 +1,57 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title MWF Users
+link(rel="stylesheet", href="../css/users.css")
+.dashboard
+  aside.sidebar
+    nav
+      .profile
+        img(src="../imgs/Beauty.png", width="100px", height="100px", style="border-radius: 100%")
+        h3 Tee Mwangi
+        h4 Manager
+      ul
+        li
+          a(href="/dash")
+            i.fas.fa-home
+            |  Dashboard
+        li
+          a(href="/stockentry")
+            i.fas.fa-home
+            |  Stock Entry
+        li
+          a(href="/reports")
+            i.fas.fa-file-alt
+            |  Reports
+        li
+          a(href="/users")
+            i.fas.fa-file-alt
+            | Attendants
+        li
+          a(href="/login", onclick="logoutUser()")
+            i.fas.fa-sign-out-alt
+            |  Logout
+
+  main.main-content
+    section.days
+      br
+      br
+      div
+        | 
+Welcome, Tee
+
+        br
+        span#date
+    #form
+      .form-group
+        input#name(type="text", placeholder="Attendant Name")
+        input#role(type="text", placeholder="Role (e.g. loader, cashier)")
+        button.btn(onclick="addOrUpdateUser()") Add / Update
+    table
+      thead
+        tr
+          th Serial Number
+          th Name
+          th Role
+          th Actions
+      tbody#userTable
+script(src="/javascript/users.js")

@@ -1,0 +1,65 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Document
+link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
+link(rel="stylesheet", href="/public/css/reports.css")
+.dashboard
+  div
+    aside.sidebar
+      h2 MWF
+      nav
+        .profile
+          img(src="../imgs/Beauty.png", alt="Manager Profile", width="100px", height="100px", style="border-radius: 50%")
+          h3 Tee Mwangi
+          p Manager
+        ul
+          li
+            a(href="/dash")
+              i.fas.fa-home
+              |  Dashboard
+          li
+            a(href="/users")
+              i.fas.fa-file-alt
+              | Attendants
+          li
+            a(href="/reports")
+              i.fas.fa-file-alt
+              |  Reports
+  .reports-container
+    h1 Reports Dashboard
+    section.recent-sales
+      h3 Recent Sales
+      table
+        thead
+          tr
+            th Date
+            th Product
+            th Amount
+            th Status
+        tbody
+          tr
+            td 28-05-25
+            td Wooden Clock
+            td $75
+            td Delivered
+          tr
+            td 11-05-25
+            td Mirror
+            td $120
+            td Pending
+          tr
+            td 07-07-25
+            td Lamp
+            td $55
+            td Shipped
+          tr
+            td 04-03-25
+            td Drawer
+            td $89
+            td Delivered
+          tr
+            td 04-03-25
+            td Coffee table
+            td $115
+            td Cancelled
+    script(src="reports.js")

@@ -9,6 +9,7 @@ document.getElementById("saleForm").addEventListener("submit", function (e) {
   const transport = document.getElementById("transport").checked;
   const basePrice = parseFloat(document.getElementById("basePrice").value);
   const notes = document.getElementById("notes").value;
+  const soldBy = document.getElementById("soldBy").value;
 
   const transportFee = transport ? 0.05 * basePrice * quantity : 0;
   const total = basePrice * quantity + transportFee;
@@ -24,6 +25,7 @@ document.getElementById("saleForm").addEventListener("submit", function (e) {
       <strong>Sales Agent:</strong> Tee<br>
       <strong>Date:</strong> ${new Date().toLocaleDateString()}<br>
       <strong>Notes:</strong> ${notes || "None"}
+      <strong>Sold by:</strong> ${soldBy}<br>
     `;
   document.getElementById("receiptOutput").innerHTML = receipt;
 });

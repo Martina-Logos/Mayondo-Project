@@ -1,0 +1,64 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Sales Agent Dashboard
+link(rel="stylesheet", href="/css/agentdash.css")
+header
+  h2 MWF Sales Agent Dashboard
+  div
+    | Welcome, Tee | 
+    span#date
+.container
+  nav
+    .profile
+      img(src="../imgs/salesAgent.jpg", width="100px", height="100px", style="border-radius: 500%")
+      h3 Mugerwa Rollins
+      h4 Sales Agent
+    ul
+      li
+        a(href="agentdash.html")
+          i.fas.fa-home
+          |  Dashboard
+      li
+        a(href="agentsales.html")
+          i.fas.fa-box-open
+          | Sales Entry
+      li
+        a(href="receipts.html")
+          i.fas.fa-box-open
+          |  Receipts
+      li
+        a(href="agentreports.html")
+          i.fas.fa-chart-line
+          | Reports
+  //  Include Chart.js 
+  //  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  .card
+    h3 📊 Sales Overview
+    canvas#salesChart(height="100")
+  .card
+    h3 🥧 Payment Breakdown
+    canvas#paymentChart(height="100")
+  .card
+    h3 🏆 Top Products Sold
+    ul#topProducts
+      li
+        img(src="bed.jpg", alt="Bed", width="40")
+        |  Bed – 12 units
+      li
+        img(src="sofa.jpg", alt="Sofa", width="40")
+        |  Sofa – 9 units
+      li
+        img(src="table.jpg", alt="Table", width="40")
+        |  Dining Table – 7 units
+
+  .card
+    h3 💸 Commission Estimate
+    p
+      strong UGX 1,200,000
+      |  earned this month
+  .card
+    h3 🔁 Customer Repeat Rate
+    p
+      strong 28%
+      |  of customers returned for a second purchase
+  script(src="/javascript/agentdash.js")

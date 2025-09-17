@@ -1,0 +1,64 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Document
+link(rel="stylesheet", href="/css/agentsales.css")
+header
+  h2 MWF Sales Agent Dashboard
+  div
+    | Welcome, Tee | 
+    span#date
+.container
+  nav
+    .profile
+      img(src="../imgs/salesAgent.jpg", width="100px", height="100px", style="border-radius: 500%")
+      h3 Mugerwa Rollins
+      h4 Sales Agent
+    ul
+      li
+        a(href="/agentdash")
+          i.fas.fa-home
+          |  Dashboard
+      li
+        a(href="/agentsales")
+          i.fas.fa-box-open
+          | Sales Entry
+      li
+        a(href="/receipts")
+          i.fas.fa-box-open
+          |  Receipts
+      li
+        a(href="/agentreports")
+          i.fas.fa-chart-line
+          | Reports
+  main
+    .card
+      h3 Record New Sale
+      form#saleForm
+        label Product Name
+        input#product(name="product" type="text", required)
+        label Quantity
+        input#quantity(name="quantity" type="number", required)
+        label Customer Name
+        input#customer(name="customer" type="text", required)
+        label Payment Method
+        select#payment
+          option(value="Cash") Cash
+          option(value="Cheque") Cheque
+          option(value="Bank Overdraft") Bank Overdraft
+        label Transport Required?
+        input#transport(name="transport" type="checkbox")
+        label Cost Price (UGX)
+        input#costPrice(name="costPrice" type="number", required)
+        label Notes
+        textarea#notes(placeholder="Optional...")
+        label Sold by
+        input#soldBy(name="soldBy" type="text", required)
+        button(type="submit") Generate Receipt
+    //
+       <div class="card">
+                <h3>Receipt Preview</h3>
+                <div class="receipt" id="receiptOutput">
+                  Fill the form to preview receipt...
+                </div>
+              </div> 
+script(src="/javascript/agentsales.js")
