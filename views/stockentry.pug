@@ -1,7 +1,7 @@
 meta(charset="UTF-8")
 meta(name="viewport", content="width=device-width,initial-scale=1")
 title Document
-link(rel="stylesheet", href="../css/stockentry.css")
+link(rel="stylesheet", href="css/stockentry.css")
 .dashboard
   aside.sidebar
     h2 Manager Dashboard
@@ -12,24 +12,24 @@ link(rel="stylesheet", href="../css/stockentry.css")
         h4 Manager
       ul
         li
-          a(href="/dash")
+          a(href="dash.html")
             i.fas.fa-home
             |  Dashboard
         li
-          a(href="/stockentry")
+          a(href="stockentry.html")
             i.fas.fa-home
             |  Stock Entry
         li
-          a(href="/reports")
+          a(href="reports.html")
             i.fas.fa-file-alt
             |  Reports
         li
-          a(href="/users")
+          a(href="users.html")
             i.fas.fa-file-alt
             | Attendants
   section#record-stock
     h2 Record New Stock
-    form#stockForm
+    form#stockForm(action="/stockentry", method="post")
       label(for="productName") Product Name:
       input#productName(type="text", name="productName", required)
       label(for="category") Category:
@@ -42,33 +42,10 @@ link(rel="stylesheet", href="../css/stockentry.css")
       label(for="unitPrice") Unit Price (UGX):
       input#unitPrice(type="number", name="unitPrice", min="0", required)
       label Cost Price (UGX):
-      input#costPrice(type="text")
-      //
-         
-                <label>Unit Value (UGX):</label>
-                <input type="text" id="totalValue" /> 
+      input#costPrice(type="number", name="costPrice", min="0", required)
       label(for="supplier") Supplier:
       input#supplier(type="text", name="supplier")
       label(for="dateReceived") Date Received:
       input#dateReceived(type="date", name="dateReceived", required)
       button(type="submit") Save Stock
-  //
-     <h2>Recorded Stock</h2>
-          <table id="stockTable">
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Qty</th>
-                <th>Unit Price</th>
-                <th>Cost Price</th>
-                <th>Supplier</th>
-                <th>Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              Rows will be added here dynamically
-            </tbody>
-          </table> 
 script(src="../javascript/stockentry.js")

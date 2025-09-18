@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
 
 const { ensureauthenticated, ensureManager } = require("../middleware/auth");
-const StockModel = require("../models/stockModels");
+const StockModel = require("../models/stockModel");
 
-
-router.get("/stockentry", ensureauthenticated, ensureManager, (req, res) => {
+//ensureauthenticated, ensureManager,
+router.get("/stockentry",  (req, res) => {
   //like the registerStock, you can use any  name that's not the file namebut better to have it related to what content is in the file
   res.render("stockentry");
 });
@@ -19,7 +18,7 @@ router.post("/stockentry", async (req, res) => {
     res.redirect("/dash");
   } catch (error) {
     console.error(error);
-    res.redirect("/index");
+    res.redirect("/stockentry");
   }
 });
 

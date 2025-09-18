@@ -33,7 +33,7 @@ header
   main
     .card
       h3 Record New Sale
-      form#saleForm
+      form#saleForm(action="/agentsales", method="post")
         label Product Name
         input#product(name="product" type="text", required)
         label Quantity
@@ -49,7 +49,7 @@ header
         input#transport(name="transport" type="checkbox")
         label Cost Price (UGX)
         input#costPrice(name="costPrice" type="number", required)
-        label Notes
+         label Total Price (UGX)
         textarea#notes(placeholder="Optional...")
         label Sold by
         input#soldBy(name="soldBy" type="text", required)

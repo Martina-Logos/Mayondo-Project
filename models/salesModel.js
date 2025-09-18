@@ -1,16 +1,15 @@
 const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
-const signupSchema = new mongoose.Schema({
+const salesSchema = new mongoose.Schema({
   product: {
     type: String,
     required: true,
     unique: true,
     trim: true,
-    // trim: true this one combines the users names which isn't necessary
   },
   quantity: {
-    type: String,
+    type: Number,
   },
   customer: {
     type: String,
@@ -19,19 +18,28 @@ const signupSchema = new mongoose.Schema({
     type: Boolean,
   },
   costPrice: {
-    type: String,
+    type: Number,
   },
-  salesAgent: {
+  totalPrice: {
+  type: Number,
+  },
+  soldBy: {
+    type: String,
     type: mongoose.Schema.Types.ObjectId,
     ref: "UserModel",
     required: true,
   },
+  // salesAgent: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "UserModel",
+  //   required: true,
+  // },
 });
 
 
     // Export Model
-signupSchema.plugin(passportLocalMongoose, {
+salesSchema.plugin(passportLocalMongoose, {
   usernameField: "email",
 });
 
-module.exports = mongoose.model("userModel", signupSchema);
+module.exports = mongoose.model("salesModel", salesSchema);

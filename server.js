@@ -16,7 +16,7 @@ const userModel = require("./models/userModel");
 //import routes
 const authRoutes = require("./routes/authRoutes");
 const stockRoutes = require("./routes/stockRoutes");
-
+const salesRoutes = require("./routes/salesRoutes");
 
 //2.Instantiations
 const app = express();
