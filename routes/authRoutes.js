@@ -27,12 +27,12 @@ router.get("/agentdash", (req, res) => {
 router.post(
   "/login",
   (req, res, next) => {
-    console.log("Login attempt:", req.body); // 👈 log credentials
+    console.log("Login attempt:", req.body); // login credentials
     next();
   },
   passport.authenticate("local", { failureRedirect: "/index" }),
   (req, res) => {
-    console.log("Authenticated user:", req.user); // 👈 log user
+    console.log("Authenticated user:", req.user); // login user
     req.session.user = req.user;
     if (req.user.role === "Manager") {
       res.redirect("/dash");

@@ -34,14 +34,25 @@ header
     .card
       h3 Record New Sale
       form#saleForm(action="/agentsales", method="post")
+        label Product Type
+        select#productType
+          option(value="") Cash
+          option(value="Wood") Wood
+          option(value="Furniture") Furniture
+
         label Product Name
-        input#product(name="product" type="text", required)
+        select#productType(name="productName", required)
+            if stock.length 
+              each stock in stocks
+        option(value=stock.productName)= stock.productName 
+        label Product Name
+        input#product(name="productName" type="text", required)
         label Quantity
         input#quantity(name="quantity" type="number", required)
         label Customer Name
         input#customer(name="customer" type="text", required)
         label Payment Method
-        select#payment
+        select#payment(name="payment", required)
           option(value="Cash") Cash
           option(value="Cheque") Cheque
           option(value="Bank Overdraft") Bank Overdraft
@@ -49,7 +60,7 @@ header
         input#transport(name="transport" type="checkbox")
         label Cost Price (UGX)
         input#costPrice(name="costPrice" type="number", required)
-         label Total Price (UGX)
+        label Total Price (UGX)
         textarea#notes(placeholder="Optional...")
         label Sold by
         input#soldBy(name="soldBy" type="text", required)
